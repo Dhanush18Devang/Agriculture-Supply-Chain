@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Checkout - AgriSupply</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-green-500 shadow-md py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="text-white text-xl font-semibold">AgriSupply</div>
+            <ul class="flex space-x-6">
+                <li><a href="home.html" class="text-gray-200 hover:text-white transition-colors">Home</a></li>
+                <li><a href="cart.html" class="text-gray-200 hover:text-white transition-colors">Cart</a></li>
+            </ul>
+            <div class="nav-right">
+                <button onclick="logout()" class="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded transition-colors">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="checkout-details bg-white rounded-lg shadow-lg p-6">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">Delivery Address</h2>
+            <form id="shipping-form" class="space-y-4">
+                <div class="form-group">
+                    <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Full Name:</label>
+                    <input type="text" id="name" name="name" required class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div class="form-group">
+                    <label for="address" class="block text-gray-700 text-sm font-bold mb-2">Address:</label>
+                    <textarea id="address" name="address" rows="3" required class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="city" class="block text-gray-700 text-sm font-bold mb-2">City:</label>
+                    <input type="text" id="city" name="city" required class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div class="form-group">
+                    <label for="state" class="block text-gray-700 text-sm font-bold mb-2">State/Province:</label>
+                    <input type="text" id="state" name="state" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div class="form-group">
+                    <label for="zip" class="block text-gray-700 text-sm font-bold mb-2">Zip/Postal Code:</label>
+                    <input type="text" id="zip" name="zip" required class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div class="form-group">
+                    <label for="phone" class="block text-gray-700 text-sm font-bold mb-2">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <button type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded shadow-md focus:outline-none focus:shadow-outline transition-colors" onclick="goToPayment()">Proceed to Payment</button>
+            </form>
+        </div>
+
+        <div class="order-summary bg-white rounded-lg shadow-lg p-6">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">Order Summary</h2>
+            <div id="summary-items" class="space-y-3">
+                </div>
+            <div class="summary-total mt-6 pt-4 border-t border-gray-200 flex justify-between items-center">
+                <strong class="text-gray-700 text-lg font-semibold">Total:</strong>
+                <span id="summary-total-price" class="text-xl font-bold text-green-600">0</span>
+            </div>
+        </div>
+    </section>
+
+    <script src="checkout.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>

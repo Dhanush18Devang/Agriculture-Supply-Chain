@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AgriSupply - Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <script src="auth.js"></script>
+  <script>checkAuth();</script>
+
+  <header>
+    <h1>AgriSupply</h1>
+    <nav class="navbar">
+      <div class="nav-logo"></div>
+      <ul class="nav-left">
+        <li><a href="#products">Products Catalog</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+      <div class="nav-right">
+        <button onclick="logout()">Logout</button>
+      </div>
+    </nav>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Welcome to AgriSupply</h1>
+        <p>Fresh from the farm to your doorstep. Supporting farmers, serving freshness.</p>
+        <a href="#products" class="hero-btn">Shop Now</a>
+      </div>
+    </section>
+    
+    
+    
+  </header>
+
+  <section id="hero">
+    <h2>Fresh Farm Products Delivered to You</h2>
+    <p>Order vegetables, grains, and more directly from farmers.</p>
+  </section>
+
+  <section id="products">
+    <h2>Available Products</h2>
+    <div class="product-list" id="product-list"></div>
+  </section>
+
+ 
+
+  <section id="about" class="about-section">
+    <div class="about-container">
+      <div class="about-image">
+        <img src="image/farm-life.jpg" alt="Farm Life">
+      </div>
+      <div class="about-text">
+        <h2>About Us</h2>
+        <p>
+          Welcome to AgriSupply – your trusted partner for fresh, high-quality agricultural products directly from farmers. 
+          We aim to bridge the gap between local farms and consumers by offering a wide range of crops at fair prices. 
+          Our mission is to empower farmers, ensure food quality, and build a sustainable future for agriculture.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Dhanush H</p>
+    <p>Email:dhanushdevang1811@gmail.com</p>
+    <p>Phone: +91-9980465998</p>
+  </section>
+
+  <footer>
+    <p>Designed & Developed by Dhanush H</p>
+    <p>&copy; 2025 AgriSupply. All rights reserved .</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
