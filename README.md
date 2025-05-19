@@ -1,2 +1,1 @@
-# Agriculture-Supply-Chain
-Web-Based, REACT,Blockchain
+Run home.html so see the entire website
